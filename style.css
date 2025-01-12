@@ -59,3 +59,43 @@ button.no-btn {
     left: 50%;
     transform: translateX(-50%);
 }
+.github-link a {
+    color: #e94d58;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    
+}
+
+.github-link a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff7eb3, #e94d58);
+    transition: width 0.4s ease-in-out;
+}
+
+.github-link a:hover {
+    color: #ffffff;
+    background: linear-gradient(90deg, #ff7eb3, #e94d58);
+    padding: 8px 12px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(233, 77, 88, 0.5);
+}
+
+.github-link a:hover::before {
+    width: 100%;
+}
+
+.github-link a:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 10px rgba(233, 77, 88, 0.7);
+}
+
